@@ -548,3 +548,288 @@ body {
 
 
                 
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- Laptops / small desktops (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+    .hero-banner {
+        gap: 40px;
+    }
+
+    .about {
+        grid-template-columns: 300px 1fr;
+        gap: 50px;
+    }
+
+    .contact-main {
+        gap: 40px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex: 1 1 200px;
+    }
+}
+
+/* ---------- Tablets (<= 768px) ---------- */
+@media (max-width: 768px) {
+    :root {
+        --nav-h: 120px;
+    }
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.25em;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.95em;
+    }
+
+    .hero-banner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: calc(var(--nav-h) + 20px);
+        padding-bottom: 40px;
+        text-align: center;
+        background-image:
+            linear-gradient(180deg, rgba(10, 22, 65, 0.92) 0%, rgba(10, 22, 65, 0.8) 100%),
+            url(image/metro_dumaguete_college_mdc_cover.jpg);
+    }
+
+    .profile {
+        order: -1;
+        width: min(240px, 65%);
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .two-nav {
+        justify-content: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-top: calc(var(--nav-h) + 20px);
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    .about-picture {
+        max-width: 280px;
+    }
+
+    .about-picture::before {
+        transform: translate(12px, 12px);
+    }
+
+    .about-text h1 {
+        font-size: 2.1em;
+    }
+
+    .about-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-tags {
+        justify-content: center;
+    }
+
+    .skills {
+        padding-bottom: 40px;
+    }
+
+    .skills h1 {
+        padding: 25px 20px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    .box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: none;
+        height: 210px;
+    }
+
+    .box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .project {
+        padding-bottom: 40px;
+    }
+
+    .project-list {
+        gap: 10px;
+    }
+
+    .box2 {
+        width: min(350px, 100%);
+        margin: 10px;
+    }
+
+    .contact {
+        padding: 40px 6%;
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-intro {
+        text-align: center;
+    }
+
+    .contact-intro h1 {
+        font-size: 2.1em;
+    }
+
+    .contact-intro p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-social {
+        justify-content: center;
+    }
+
+    .contact-footer {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ---------- Phones (<= 480px) ---------- */
+@media (max-width: 480px) {
+    :root {
+        --nav-h: 110px;
+    }
+
+    .nav-links a {
+        padding: 7px 9px;
+        font-size: 0.85em;
+    }
+
+    .hero-greeting {
+        font-size: 16px;
+    }
+
+    .hero-text p,
+    .about-text p,
+    .contact-intro p {
+        font-size: 15px;
+    }
+
+    .two-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pn {
+        width: 100%;
+    }
+
+    .about-text h1,
+    .contact-intro h1 {
+        font-size: 1.8em;
+    }
+
+    .about-tags span {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
+
+    .skills h1 {
+        font-size: 1.6em;
+    }
+
+    .box {
+        flex: 1 1 100%;
+        height: 170px;
+    }
+
+    .box img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .project h1 {
+        font-size: 1.6em;
+    }
+
+    .project-img {
+        height: 170px;
+    }
+
+    .contact-card {
+        padding: 5px 18px;
+    }
+
+    .contact-item {
+        gap: 14px;
+        padding: 16px 0;
+    }
+
+    .contact-item .icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .contact-footer ul {
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+/* ---------- Short landscape phones ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    html {
+        scroll-snap-type: none;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
